@@ -14,6 +14,7 @@ var sound_grabNewAK = new Audio("sounds/grabNewAK.wav");
 function shoot() {
 	
 	if(!outOfBullets()) {
+		sound_shoot.volume = 0.3;
 		sound_shoot.pause();
 		sound_shoot.currentTime = 0;
 		sound_shoot.play();
