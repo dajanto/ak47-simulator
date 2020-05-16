@@ -1,8 +1,3 @@
-window.onload = function () {
-
-    grabNewAK();
-}
-
 var bullets;
 var rounds;
 
