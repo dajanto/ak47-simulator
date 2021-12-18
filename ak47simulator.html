@@ -1,9 +1,10 @@
 <html>
 	<head>
+		<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"dajanto",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
 		<style>
-			#body {
-				background-repeat: no-repeat;	
-			}
+#body {
+	background-repeat: no-repeat;	
+}
 			#ammo {
 				width: 50%;
 				margin: auto;
@@ -12,13 +13,13 @@
 		</style>
 	</head>
 	<body id="body" background="artwork/ak47_picture.jpg">
-	<div id="ak47">
-		<h1>REALISTIC AK47 SHOOTING SIMULATOR</h1>
-		<button id="shoot" onclick="shoot()">Shoot</button>
-		<button id="reload" onclick="reload()">Reload</button>
-		<button id="dropakpls" onclick="grabNewAK()">DROP ANOTHER AK PLS</button>
-		<h1 id="ammo"></h1>
-	</div>
-	<script src="ak47simulator.js"></script>
+		<div id="ak47">
+			<h1>REALISTIC AK47 SHOOTING SIMULATOR</h1>
+			<button id="shoot" onclick="shoot()">Shoot</button>
+			<button id="reload" onclick="reload()">Reload</button>
+			<button id="dropakpls" onclick="grabNewAK()">DROP ANOTHER AK PLS</button>
+			<h1 id="ammo"></h1>
+		</div>
+		<script src="ak47simulator.js"></script>
 	</body>
 </html>
