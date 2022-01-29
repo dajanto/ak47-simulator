@@ -8,17 +8,17 @@ var sound_reload_two = new Audio("sounds/reload_two.wav");
 var sound_grabNewAK = new Audio("sounds/grabNewAK.wav");
 
 function shoot() {
-	
-	if(!outOfBullets()) {
-		
+
+	if (!outOfBullets()) {
+
 		sound_shoot.volume = 0.02;
 		sound_shoot.pause();
 		sound_shoot.currentTime = 0;
 		sound_shoot.play();
 	}
-	
-	if(bullets !== 0) {
-		
+
+	if (bullets !== 0) {
+
 		bullets--;
 		displayAmmo();
 	}
@@ -78,4 +78,8 @@ function getBody() {
 
 function getAmmo() {
 	return document.getElementById('ammo');
+}
+
+function getInput() {
+	return document.getElementById('trigger');
 }
