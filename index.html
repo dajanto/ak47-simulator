@@ -55,7 +55,7 @@
 			font-size: 40px;
 		}
 
-		.trigger:checked+.range .gun+.shot {
+		.trigger:checked+.range + .gun+.shot {
 			opacity: 1;
 			transform: translateX(10000%);
 			transition: opacity .1s, transform .7s;
@@ -74,7 +74,7 @@
 	<button id="shoot" onclick="shoot()">Shoot</button>
 	<button id="reload" onclick="reload()">Reload</button>
 	<button id="dropakpls" onclick="grabNewAK()">DROP ANOTHER AK PLS</button>
-	<h1 id="ammo"></h1>
+	<h1 id="ammo">( 30 | 90 )</h1>
 
 	<input id='trigger1' class='trigger' type='radio' name='fire'>
 
