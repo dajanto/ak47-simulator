@@ -65,15 +65,21 @@
 			display: none;
 		}
 
+		.buttongroup {
+		}
+
 	</style>
 </head>
 <body id="body">
 
 	<h1>REALISTIC AK47 SHOOTING SIMULATOR</h1>
 
-	<button id="shoot" onclick="shoot()">Shoot</button>
-	<button id="reload" onclick="reload()">Reload</button>
-	<button id="dropakpls" onclick="grabNewAK()">DROP ANOTHER AK PLS</button>
+	<div class="buttongroup">
+		<button id="shoot" onclick="shoot()">Shoot</button>
+		<button id="reload" onclick="reload()">Reload</button>
+		<button id="dropakpls" onclick="grabNewAK()">DROP ANOTHER AK PLS</button>
+	</div>
+
 	<h1 id="ammo">( 30 | 90 )</h1>
 
 	<input id='trigger1' class='trigger' type='radio' name='fire'>
