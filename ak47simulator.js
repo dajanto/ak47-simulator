@@ -54,8 +54,8 @@ function grabNewAK() {
 }
 
 function displayAmmo() {
-	
-	document.getElementById("ammo").innerHTML = "( " + bullets + " | " + rounds + ")";
+
+	getAmmo().innerHTML = "( " + bullets + " | " + rounds + ")";
 }
 
 function isWeaponEmpty() {
@@ -71,4 +71,12 @@ function outOfBullets() {
 function outOfRounds() {
 	
 	return rounds == 0;
+}
+
+function getBody() {
+	return document.getElementById('body');
+}
+
+function getAmmo() {
+	return document.getElementById('ammo');
 }

@@ -4,9 +4,11 @@
 	<script src="ak47simulator.js"></script>
 	<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"dajanto",utcoffset:"1"}))};sessionStorage.setItem("_swa","1");</script>
 	<style>
+
 		#body {
 			background-repeat: no-repeat;
 		}
+
 		#ammo {
 			width: 50%;
 			margin: auto;
@@ -20,7 +22,6 @@
 
 		.gun {
 			font-size: 80px;
-			margin-left: 70%;
 			position: relative;
 			display: block;
 			line-height: 1;
@@ -30,11 +31,11 @@
 		.gun::before {
 			opacity: 0;
 			content: '💥';
-			font-size: 30px;
+			font-size: 50px;
 			display: inline-block;
 			position: absolute;
-			left: -10%;
-			top: 22px;
+			left: 28%;
+			top: 20%;
 		}
 
 		.gun:active::before {
@@ -49,14 +50,14 @@
 		.shot {
 			position: absolute;
 			opacity: 0;
-			left: 70%;
-			top: 12px;
+			left: 30%;
+			margin-top: 40px;
 			font-size: 40px;
 		}
 
 		.trigger:checked+.range .gun+.shot {
 			opacity: 1;
-			transform: translateX(-10000%);
+			transform: translateX(10000%);
 			transition: opacity .1s, transform .7s;
 		}
 
@@ -66,27 +67,32 @@
 
 	</style>
 </head>
-<body id="body" background="artwork/ak47_picture.jpg">
+<body id="body">
 
-<div id="ak47">
 	<h1>REALISTIC AK47 SHOOTING SIMULATOR</h1>
+
 	<button id="shoot" onclick="shoot()">Shoot</button>
 	<button id="reload" onclick="reload()">Reload</button>
 	<button id="dropakpls" onclick="grabNewAK()">DROP ANOTHER AK PLS</button>
 	<h1 id="ammo"></h1>
-</div>
 
-<input id='trigger1' class='trigger' type='radio' name='fire'>
-<span class='range'>
-<label class="gun" for='trigger1'>🔫</label>
-<output class='shot'>⁌</output>
-</span>
+	<input id='trigger1' class='trigger' type='radio' name='fire'>
 
-<input id='trigger2' class='trigger' type='radio' name='fire' checked>
-<span class='range'>
-<label class="gun" for='trigger2'>🔫</label>
-<output class='shot'>⁌</output>
-</span>
+	<span class='range'>
+		<label class="gun" for='trigger1'>
+			<img src="artwork/ak47_picture.jpg">
+		</label>
+		<output class='shot'>⁌</output>
+	</span>
+
+	<input id='trigger2' class='trigger' type='radio' name='fire' checked>
+
+	<span class='range'>
+		<label class="gun" for='trigger2'>
+			<img src="artwork/ak47_picture.jpg">
+		</label>
+		<output class='shot'>⁌</output>
+	</span>
 
 </body>
 </html>
