@@ -1,6 +1,5 @@
 var bullets = 30;
 var rounds = 90;
-displayAmmo();
 
 // Sounds
 var sound_shoot = new Audio("sounds/shoot.wav");
@@ -9,17 +8,17 @@ var sound_reload_two = new Audio("sounds/reload_two.wav");
 var sound_grabNewAK = new Audio("sounds/grabNewAK.wav");
 
 function shoot() {
-	
-	if(!outOfBullets()) {
-		
+
+	if (!outOfBullets()) {
+
 		sound_shoot.volume = 0.02;
 		sound_shoot.pause();
 		sound_shoot.currentTime = 0;
 		sound_shoot.play();
 	}
-	
-	if(bullets !== 0) {
-		
+
+	if (bullets !== 0) {
+
 		bullets--;
 		displayAmmo();
 	}
@@ -54,8 +53,8 @@ function grabNewAK() {
 }
 
 function displayAmmo() {
-	
-	document.getElementById("ammo").innerHTML = "( " + bullets + " | " + rounds + ")";
+
+	getAmmo().innerHTML = "( " + bullets + " | " + rounds + ")";
 }
 
 function isWeaponEmpty() {
@@ -71,4 +70,16 @@ function outOfBullets() {
 function outOfRounds() {
 	
 	return rounds == 0;
+}
+
+function getBody() {
+	return document.getElementById('body');
+}
+
+function getAmmo() {
+	return document.getElementById('ammo');
+}
+
+function getInput() {
+	return document.getElementById('trigger');
 }
