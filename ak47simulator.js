@@ -1,3 +1,4 @@
+
 var bullets = 30;
 var rounds = 90;
 displayAmmo();
