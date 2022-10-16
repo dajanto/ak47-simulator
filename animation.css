@@ -1,0 +1,63 @@
+#body {
+    background-repeat: no-repeat;
+}
+
+#ammo {
+    width: 50%;
+    margin: auto;
+    color: green;
+}
+.range {
+    display: block;
+    width: 100%;
+    position: absolute;
+}
+
+.gun {
+    font-size: 80px;
+    position: relative;
+    display: block;
+    line-height: 1;
+    cursor: pointer
+}
+
+.gun::before {
+    opacity: 0;
+    content: '💥';
+    font-size: 50px;
+    display: inline-block;
+    position: absolute;
+    left: 67%;
+    top: 17%;
+}
+
+.gun:active::before {
+    opacity: 1;
+}
+
+#trigger1,
+#trigger2 {
+    display: none;
+}
+
+.shot {
+    position: absolute;
+    opacity: 0;
+    left: 30%;
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.trigger:checked+.range + .gun+.shot {
+    opacity: 1;
+    transform: translateX(10000%);
+    transition: opacity .1s, transform .7s;
+}
+
+.trigger:checked+.range .gun {
+    display: none;
+}
+
+.buttongroup {
+}
+
